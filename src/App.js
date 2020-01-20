@@ -17,7 +17,7 @@ function App() {
     </BrowserRouter>
   );
 }
-//this is a comment for git
+//this is a comment for git2
 
 
 export default App;
