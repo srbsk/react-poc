@@ -7,9 +7,10 @@ import {
   BrowserRouter as Router,
   Route,
 } from "react-router-dom";
-import Home from './Home';
-import Transaction from './transaction';
-import Employee from './employee';
+import Home from './components/LoginScreen/Home';
+import Transaction from './components/AccountTransactions/transaction';
+import Employee from './components/InvolvedParties/employee';
+import InvolvedPartyAccountBalance from './components/AccountBalances/involvedpartyaccountbalance';
 
 
 export default class app extends React.Component {
@@ -37,7 +38,7 @@ export default class app extends React.Component {
                     </NavIcon>
                     <NavText>
                       Home
-                        </NavText>
+                    </NavText>
                   </NavItem>
                   <NavItem eventKey="employee">
                     <NavIcon>
@@ -45,7 +46,7 @@ export default class app extends React.Component {
                     </NavIcon>
                     <NavText>
                       Involved Party
-                        </NavText>
+                    </NavText>
                   </NavItem>
                   <NavItem eventKey="transaction">
                     <NavIcon>
@@ -53,7 +54,31 @@ export default class app extends React.Component {
                     </NavIcon>
                     <NavText>
                       Transactions
-                        </NavText>
+                    </NavText>
+                  </NavItem>
+                  <NavItem eventKey="balance">
+                    <NavIcon>
+                      <i className="fa fa-balance-scale" style={{ fontSize: '1.75em' }} />
+                    </NavIcon>
+                    <NavText>
+                      Balance
+                    </NavText>
+                  </NavItem>
+                  <NavItem eventKey="accountlock">
+                    <NavIcon>
+                      <i className="fa fa-lock" style={{ fontSize: '1.75em' }} />
+                    </NavIcon>
+                    <NavText>
+                      Account Lock
+                    </NavText>
+                  </NavItem>
+                  <NavItem eventKey="communicationManagement">
+                    <NavIcon>
+                      <i className="fa fa-phone-square" style={{ fontSize: '1.75em' }} />
+                    </NavIcon>
+                    <NavText>
+                      Communication Management
+                    </NavText>
                   </NavItem>
                 </SideNav.Nav>
               </SideNav>
@@ -62,6 +87,7 @@ export default class app extends React.Component {
                 <Route path="/home" component={props => <Home />} />
                 <Route path="/employee" component={props => <Employee />} />
                 <Route path="/transaction" component={props => <Transaction />} />
+                <Route path="/balance" component={props => <InvolvedPartyAccountBalance />} />
               </main>
             </React.Fragment>
           )}

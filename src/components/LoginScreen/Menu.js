@@ -1,5 +1,5 @@
 import React from 'react';
-import './Menustyle.css';
+import '../../styles/Menustyle.css';
 
 import { Link } from 'react-router-dom';
 

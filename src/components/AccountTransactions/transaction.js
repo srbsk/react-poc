@@ -1,11 +1,11 @@
-import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import 'font-awesome/css/font-awesome.min.css';
+import React from '../../../node_modules/react';
+import Table from '../../../node_modules/@material-ui/core/Table';
+import TableCell from '../../../node_modules/@material-ui/core/TableCell';
+import TableContainer from '../../../node_modules/@material-ui/core/TableContainer';
+import TableRow from '../../../node_modules/@material-ui/core/TableRow';
+// import Paper from '../../../node_modules/@material-ui/core/Paper';
+import '../../../node_modules/@trendmicro/react-sidenav/dist/react-sidenav.css';
+import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 
 
 class Transaction extends React.Component {
@@ -43,7 +43,7 @@ class Transaction extends React.Component {
                     <input type="text" ref="id" name="id" /><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>
                     <button onClick={() => this.getTransactionData()}>SEARCH</button></center><br /><br />
                 {this.state.show ?
-                    <TableContainer component={Paper}>
+                    <TableContainer >
                         <Table style={{ width: 900, margin: 'auto' }}>
                             <TableRow bgcolor="#B5938B">
                                 <TableCell align="left"><bold>ID</bold></TableCell>
